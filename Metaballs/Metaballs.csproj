@@ -1,0 +1,35 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.WindowsDesktop">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+    <RootNamespace>Metaballs</RootNamespace>
+    <UseWindowsForms>true</UseWindowsForms>
+    <AssemblyName>Metaballs</AssemblyName>
+    <AssemblyVersion>2020.4.120.21</AssemblyVersion>
+    <FileVersion>2020.4.120.21</FileVersion>
+    <Company>xFX JumpStart</Company>
+    <Authors>Xavier Flix</Authors>
+    <Description>Sample implementation of a 2D Isosurface (metaballs)</Description>
+    <PackageProjectUrl></PackageProjectUrl>
+    <RepositoryUrl></RepositoryUrl>
+    <NeutralLanguage>en-US</NeutralLanguage>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
+    <OutputPath>..\Release\</OutputPath>
+    <DefineConstants>TRACE;WINFORMS</DefineConstants>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <OutputPath>..\Release\</OutputPath>
+    <DefineConstants>TRACE;WINFORMS</DefineConstants>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Folder Include="Properties\" />
+  </ItemGroup>
+
+  <Import Project="..\MorphxLibs\MorphxLibs.projitems" Label="Shared" />
+
+</Project>
